@@ -1,0 +1,9 @@
+name: AntiSpam
+author: xTailsPvP
+version: 2.0
+main: de.tails.antispam.main.Main
+api-version: 1.8
+
+commands:
+   slowchat:
+      aliases: [sc]
