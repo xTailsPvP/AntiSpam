@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
@@ -16,7 +17,7 @@ public class SpamListener implements Listener {
 	private static HashMap<UUID, Integer> spamdelay = new HashMap<UUID, Integer>();
 	private static HashMap<UUID, Integer> cmdspamdelay = new HashMap<UUID, Integer>();
 
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onChat(AsyncPlayerChatEvent event) {
 		Player player = event.getPlayer();
 		if(spamdelay.containsKey(player.getUniqueId())) {

@@ -14,10 +14,14 @@ public class Main extends JavaPlugin {
 		getCommand("slowchat").setExecutor(new SlowChat());
 		Bukkit.getPluginManager().registerEvents(new SpamListener(), this);
 		Bukkit.getConsoleSender().sendMessage(Config.getPrefix() + "§aAntiSpam wurde aktiviert!");
+		Bukkit.getConsoleSender().sendMessage("§6Plugin by DyePlugins: https://dyeplugins.net");
+		Bukkit.getConsoleSender().sendMessage("§6Source Code: https://github.com/xTailsPvP/AntiSpam");
 	}
 
 	@Override
 	public void onDisable() {
 		Bukkit.getConsoleSender().sendMessage(Config.getPrefix() + "§cAntiSpam wurde deaktiviert!");
+		Bukkit.getConsoleSender().sendMessage("§6Plugin by DyePlugins: https://dyeplugins.net");
+		Bukkit.getConsoleSender().sendMessage("§6Source Code: https://github.com/xTailsPvP/AntiSpam");
 	}
 }
